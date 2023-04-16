@@ -6,3 +6,11 @@
 // 8 7,8 -7,1 9
 
 
+int Bass(string sms)
+{
+    System.Console.WriteLine(sms);
+    String readInput = System.Console.ReadLine();
+    int result = int.Parse(readInput);
+    return result;
+}
+
