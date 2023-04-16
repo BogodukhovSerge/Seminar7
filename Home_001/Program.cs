@@ -14,19 +14,20 @@ int Bass(string sms)
     return result;
 }
 
-int[] GetArray(int Lenght, int minValui, int maxValui)
+int[,] GetArray(int rows, int colums, int min, int max)
 {
-    int[] array = new int[Lenght];
-    Random rand = new Random();
-    for (int i = 0; i < Lenght; i++)
+    int[,] array = new int[rows, colums.];
+    var rand = new Random();
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < Lenght; j++)
+        for (int j = 0; j < colums; j++)
         {
-            array[j] = rand.Next(minValui, maxValui + 1);
+            array[i,j] = rand.Next(min, max + 1);
         }
-        array[i] = rand.Next(minValui, maxValui + 1);
     }
     return array;
 
 }
+
+
 
