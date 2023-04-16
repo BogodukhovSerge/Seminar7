@@ -14,9 +14,9 @@ int Bass(string sms)
     return result;
 }
 
-int[,] GetArray(int rows, int colums, int min, int max)
+double[,] GetArrayDouble(int rows, int colums, int min, int max)
 {
-    int[,] array = new int[rows, colums.];
+    double[,] array = new double[rows, colums.];
     var rand = new Random();
     for (int i = 0; i < rows; i++)
     {
@@ -27,6 +27,19 @@ int[,] GetArray(int rows, int colums, int min, int max)
     }
     return array;
 
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int n = 0; n < matrix.GetLength(0); n++)
+    {
+        for (int m = 0; m  < matrix.GetLength(1); m++)
+        {
+            System.Console.Write($"{matrix[m, n]} ");
+
+        }
+        System.Console.WriteLine();
+    }
 }
 
 
