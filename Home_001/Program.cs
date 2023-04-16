@@ -14,3 +14,19 @@ int Bass(string sms)
     return result;
 }
 
+int[] GetArray(int Lenght, int minValui, int maxValui)
+{
+    int[] array = new int[Lenght];
+    Random rand = new Random();
+    for (int i = 0; i < Lenght; i++)
+    {
+        for (int j = 0; j < Lenght; j++)
+        {
+            array[j] = rand.Next(minValui, maxValui + 1);
+        }
+        array[i] = rand.Next(minValui, maxValui + 1);
+    }
+    return array;
+
+}
+
