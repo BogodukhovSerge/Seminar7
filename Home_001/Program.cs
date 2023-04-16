@@ -4,7 +4,16 @@
 // 0,5 7 -2 -0,2
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
+Nach();
 
+void Nach()
+{
+    int rows = Bass("rows");
+    int columns = Bass("columns");
+
+    double[,] matrix = GetArrayDouble(rows, columns, 10, 99);
+    PrintMatrix(matrix);
+}
 
 int Bass(string sms)
 {
@@ -16,7 +25,7 @@ int Bass(string sms)
 
 double[,] GetArrayDouble(int rows, int colums, int min, int max)
 {
-    double[,] array = new double[rows, colums.];
+    double[,] array = new double[rows, colums];
     var rand = new Random();
     for (int i = 0; i < rows; i++)
     {
@@ -29,7 +38,7 @@ double[,] GetArrayDouble(int rows, int colums, int min, int max)
 
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(double[,] matrix)
 {
     for (int n = 0; n < matrix.GetLength(0); n++)
     {
