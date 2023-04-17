@@ -40,3 +40,16 @@ int [,] GetArray(int rows,int columns, int min, int max)
     }
     return array;
 }
+
+void PrintMatrix(double[,] matrix)
+{
+    for (int m = 0; m < matrix.GetLength(0); m++)
+    {
+        for (int n = 0; n  < matrix.GetLength(1); n++)
+        {
+            System.Console.Write($"{matrix[m, n]} ");
+
+        }
+        System.Console.WriteLine();
+    }
+}
