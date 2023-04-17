@@ -18,6 +18,18 @@ void Nach()
     int num = ("number");
 }
 
+int ChislNum(int num)
+{
+    for (int i = 0; i <= rows; i++)
+    {
+        for(int j = 0; j <= columns; j++)
+        {
+            array[i,j] == num;
+        }
+    }
+    return array;
+}
+
 int Bass(String msg)
 {
     System.Console.WriteLine(msg);
