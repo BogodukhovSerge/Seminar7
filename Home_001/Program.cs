@@ -11,7 +11,7 @@ void Nach()
     int rows = Bass("rows");
     int columns = Bass("columns");
 
-    double[,] matrix = GetArrayDouble(rows, columns, 10, 99);
+    double[,] matrix = GetArrayDouble(rows, columns, 0, 10);
     PrintMatrix(matrix);
 }
 
@@ -31,8 +31,9 @@ double[,] GetArrayDouble(int rows, int colums, int min, int max)
     {
         for (int j = 0; j < colums; j++)
         {
-            array[i,j] = rand.Next(min, max + 1);
+            array[i,j] = rand.Next(min, max + 1)+ rand.NextDouble();
         }
+    
     }
     return array;
 
@@ -40,9 +41,9 @@ double[,] GetArrayDouble(int rows, int colums, int min, int max)
 
 void PrintMatrix(double[,] matrix)
 {
-    for (int n = 0; n < matrix.GetLength(0); n++)
+    for (int m = 0; m < matrix.GetLength(0); m++)
     {
-        for (int m = 0; m  < matrix.GetLength(1); m++)
+        for (int n = 0; n  < matrix.GetLength(1); n++)
         {
             System.Console.Write($"{matrix[m, n]} ");
 
