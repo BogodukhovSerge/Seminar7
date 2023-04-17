@@ -16,6 +16,17 @@ void Nach()
     int rows = ("rows");
     int columns = ("columns");
     int num = ("number");
+
+    int[,] matrix = GetArray(rows, columns, 5, 10);
+    ChislNum2(num);
+}
+
+
+int ChislNum2(int num)
+{
+    if (i == num) return i;
+    else if (i != num) i++;
+    else return Console.WriteLine("not number");
 }
 
 int ChislNum(int num)
@@ -38,7 +49,7 @@ int Bass(String msg)
     return result;
 }
 
-int [,] GetArray(int rows,int columns, int min, int max)
+int[,] GetArray(int rows,int columns, int min, int max)
 {
     int[,] array = new int[rows, columns];
     var random = new Random();
@@ -51,17 +62,19 @@ int [,] GetArray(int rows,int columns, int min, int max)
         }
     }
     return array;
+
 }
 
-void PrintMatrix(double[,] matrix)
-{
-    for (int m = 0; m < matrix.GetLength(0); m++)
-    {
-        for (int n = 0; n  < matrix.GetLength(1); n++)
-        {
-            System.Console.Write($"{matrix[m, n]} ");
 
-        }
-        System.Console.WriteLine();
-    }
-}
+//void PrintMatrix(double[,] matrix)
+// {
+//     for (int m = 0; m < matrix.GetLength(0); m++)
+//     {
+//         for (int n = 0; n  < matrix.GetLength(1); n++)
+//         {
+//             System.Console.Write($"{matrix[m, n]} ");
+
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
