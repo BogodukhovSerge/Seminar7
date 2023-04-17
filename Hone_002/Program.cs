@@ -13,9 +13,9 @@ Nach();
 
 void Nach()
 {
-    int rows = ("rows");
-    int columns = ("columns");
-    int num = ("number");
+    int rows = Bass("rows");
+    int columns = Bass("columns");
+    int num = Bass("number");
 
     int[,] matrix = GetArray(rows, columns, 5, 10);
     ChislNum2(num);
@@ -24,27 +24,31 @@ void Nach()
 
 int ChislNum2(int num)
 {
-    if (i == num) return i;
+    int array = 0;
+    int i = 0;  
+    int j = 0; 
+    if (array[i,j] == num) return i;
     else if (i != num) i++;
-    else return Console.WriteLine("not number");
+    return System.Console.WriteLine("not number");
 }
 
-int ChislNum(int num)
-{
-    for (int i = 0; i <= rows; i++)
-    {
-        for(int j = 0; j <= columns; j++)
-        {
-            array[i,j] == num;
-        }
-    }
-    return array;
-}
+// int ChislNum(int num)
+// {
+//     int array = 0;
+//     for (int i = 0; i <= rows; i++)
+//     {
+//         for(int j = 0; j <= columns; j++)
+//         {
+//             array[i,j] == num;
+//         }
+//     }
+//     return array;
+// }
 
 int Bass(String msg)
 {
     System.Console.WriteLine(msg);
-    String.ReadInpute = System.Console.ReadLine();
+    String ReadInpute = System.Console.ReadLine();
     int result = int.Parse(ReadInpute);
     return result;
 }
