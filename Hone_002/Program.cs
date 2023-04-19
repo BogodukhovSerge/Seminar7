@@ -59,10 +59,6 @@ int PrintChislo(int[,] matrix)
             if(num == matrix[m,n])
             {
             System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
-            System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
-
-                System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
-
             }
             System.Console.WriteLine("takogo chesla ne suschestvuet");
 
@@ -84,3 +80,4 @@ void PrintMatrix(int[,] matrix)
         System.Console.WriteLine();
     }
 }
+
