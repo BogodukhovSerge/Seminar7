@@ -58,11 +58,11 @@ void PrintMatrix(double[,] matrix)
 
 void GetSredArifNym(double[,] matrix)
 {
-    for (int j = 0; j < matrix.Length; j++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
         int count = 0;
         double res = 0;
-        for (int i = 0; i < matrix.Length; i++)
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
             res = res + matrix[i,j];
             count++;
