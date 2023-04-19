@@ -18,33 +18,11 @@ void Nach()
     int num = Bass("number");
 
     int[,] matrix = GetArray(rows, columns, 5, 10);
+    PrintMatrix(matrix);
     PrintChislo(matrix);
 
 }
 
-
-// int ChislNum2(int num)
-// {
-//     int array = 0;
-//     int i = 0;  
-//     int j = 0; 
-//     if (array[i,j] == num) return i;
-//     else if (i != num) i++;
-//     return System.Console.WriteLine("not number");
-// }
-
-// int ChislNum(int num)
-// {
-//     int array = 0;
-//     for (int i = 0; i <= rows; i++)
-//     {
-//         for(int j = 0; j <= columns; j++)
-//         {
-//             array[i,j] == num;
-//         }
-//     }
-//     return array;
-// }
 
 int Bass(String msg)
 {
@@ -71,7 +49,7 @@ int[,] GetArray(int rows,int columns, int min, int max)
 }
 
 
-void PrintChislo(int[,] matrix)
+int PrintChislo(int[,] matrix)
  {
     int num = 0;
     for (int m = 0; m < matrix.GetLength(0); m++)
@@ -79,9 +57,30 @@ void PrintChislo(int[,] matrix)
         for (int n = 0; n  < matrix.GetLength(1); n++)
         {
             if(num == matrix[m,n])
+            {
+            System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
             System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
 
+                System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
+
+            }
+            System.Console.WriteLine("takogo chesla ne suschestvuet");
+
         }
-        System.Console.WriteLine("takogo chesla ne suschestvuet");
+        
+    }
+    return num;
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int m = 0; m < matrix.GetLength(0); m++)
+    {
+        for (int n = 0; n  < matrix.GetLength(1); n++)
+        {
+            System.Console.Write($"{matrix[m, n]} ");
+
+        }
+        System.Console.WriteLine();
     }
 }
