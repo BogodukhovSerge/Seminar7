@@ -19,6 +19,7 @@ void Nach()
 
     int[,] matrix = GetArray(rows, columns, 5, 10);
     PrintMatrix(matrix);
+    Console.WriteLine();
     PrintChislo(matrix);
 
 }
@@ -49,7 +50,7 @@ int[,] GetArray(int rows,int columns, int min, int max)
 }
 
 
-int PrintChislo(int[,] matrix)
+void PrintChislo(int[,] matrix)
  {
     int num = 0;
     for (int m = 0; m < matrix.GetLength(0); m++)
@@ -58,14 +59,18 @@ int PrintChislo(int[,] matrix)
         {
             if(num == matrix[m,n])
             {
-            System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
+                System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
+                break;
             }
-            System.Console.WriteLine("takogo chesla ne suschestvuet");
 
         }
         
     }
-    return num;
+    if (num == 0)
+    {
+        System.Console.WriteLine("takogo chesla ne suschestvuet");
+    }
+    Console.WriteLine();
 }
 
 void PrintMatrix(int[,] matrix)
