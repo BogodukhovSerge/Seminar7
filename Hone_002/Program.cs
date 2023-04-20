@@ -86,3 +86,24 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+// int ChislNum2(int num)
+// {
+//     int array = 0;
+//     int i = 0;  
+//     int j = 0; 
+//     if (array[i,j] == num) return i;
+//     else if (i != num) i++;
+//     return System.Console.WriteLine("not number");
+// }
+
+// int ChislNum(int num)
+// {
+//     int array = 0;
+//     for (int i = 0; i <= rows; i++)
+//     {
+//         for(int j = 0; j <= columns; j++)
+//         {
+//             array[i,j] == num;
+//         }
+//     }
+//     return array;
