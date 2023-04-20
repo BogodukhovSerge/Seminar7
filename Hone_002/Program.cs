@@ -13,97 +13,65 @@ Nach();
 
 void Nach()
 {
-    int rows = Bass("rows");
-    int columns = Bass("columns");
-    int num = Bass("number");
-
-    int[,] matrix = GetArray(rows, columns, 5, 10);
+    int[,] matrix = new int[5,6];
+    GetArray(matrix);
     PrintMatrix(matrix);
     Console.WriteLine();
-    PrintChislo(matrix);
-
+    PrintNum(matrix);
+    
 }
 
 
-int Bass(String msg)
+void GetArray(int[,] matrix)
 {
-    System.Console.WriteLine(msg);
-    String ReadInpute = System.Console.ReadLine();
-    int result = int.Parse(ReadInpute);
-    return result;
-}
-
-int[,] GetArray(int rows,int columns, int min, int max)
-{
-    int[,] array = new int[rows, columns];
-    var random = new Random();
-    for (int i = 0; i <= rows; i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for(int j = 0; j <= columns; j++)
+        for (int j = 0; j  < matrix.GetLength(1); j++)
         {
-            array[i,j] = random.Next(min, max + 1);
-
+            matrix[i,j] = new Random().Next(-5, 7);
         }
+    
     }
-    return array;
 
-}
-
-
-void PrintChislo(int[,] matrix)
- {
-    int num = 0;
-    for (int m = 0; m < matrix.GetLength(0); m++)
-    {
-        for (int n = 0; n  < matrix.GetLength(1); n++)
-        {
-            if(num == matrix[m,n])
-            {
-                System.Console.Write($"Znachenie indexa {num} yzvlyaetsyz pozeciz {m} e {n} ");
-                break;
-            }
-
-        }
-        
-    }
-    if (num == 0)
-    {
-        System.Console.WriteLine("takogo chesla ne suschestvuet");
-    }
-    Console.WriteLine();
 }
 
 void PrintMatrix(int[,] matrix)
 {
-    for (int m = 0; m < matrix.GetLength(0); m++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int n = 0; n  < matrix.GetLength(1); n++)
+        for (int j = 0; j  < matrix.GetLength(1); j++)
         {
-            System.Console.Write($"{matrix[m, n]} ");
+            System.Console.Write($"{matrix[i, j]} ");
 
         }
         System.Console.WriteLine();
     }
 }
 
-// int ChislNum2(int num)
-// {
-//     int array = 0;
-//     int i = 0;  
-//     int j = 0; 
-//     if (array[i,j] == num) return i;
-//     else if (i != num) i++;
-//     return System.Console.WriteLine("not number");
-// }
 
-// int ChislNum(int num)
-// {
-//     int array = 0;
-//     for (int i = 0; i <= rows; i++)
-//     {
-//         for(int j = 0; j <= columns; j++)
-//         {
-//             array[i,j] == num;
-//         }
-//     }
-//     return array;
+
+void PrintNum(int[,] array)
+{
+    Console.WriteLine("Vvedute cheslo: ");
+    int number = int.Parse(Console.ReadLine());
+    int index = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i,j] == number)
+            {
+                System.Console.Write($"Znachenie indexa {number} yavlyaetsyz pozeciz {i} e {j} ");
+                index = 1;
+                break;
+            }
+        }
+    }
+    if (index == 0)
+    {
+        System.Console.WriteLine("takogo chesla ne suschestvuet");
+    }
+    Console.WriteLine();
+}
+
+
